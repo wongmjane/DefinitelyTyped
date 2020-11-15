@@ -17,7 +17,7 @@ declare class Negotiator {
      * @param [availableMediaTypes] When provided, returns the most preferred media type
      * from a list of available media types.
      */
-    mediaType(availableMediaTypes?: string[]): string | undefined;
+    mediaType<T extends string>(availableMediaTypes?: T[]): T | undefined;
 
     /**
      * Returns an array of preferred media types ordered by the client preference
@@ -25,7 +25,7 @@ declare class Negotiator {
      * @param [availableMediaTypes] When provided, returns an array of preferred media
      * types ordered by priority from a list of available media types.
      */
-    mediaTypes(availableMediaTypes?: string[]): string[];
+    mediaTypes<T extends string>(availableMediaTypes?: T[]): T[];
 
     /**
      * Returns the most preferred language from the client.
@@ -33,7 +33,7 @@ declare class Negotiator {
      * @param [availableLanguages] When provided, returns the most preferred language
      * from a list of available languages.
      */
-    language(availableLanguages?: string[]): string | undefined;
+    language<T extends string>(availableLanguages?: T[]): T | undefined;
 
     /**
      * Returns an array of preferred languages ordered by the client preference.
@@ -41,7 +41,7 @@ declare class Negotiator {
      * @param [availableLanguages] When provided, returns an array of preferred languages
      * ordered by priority from a list of available languages.
      */
-    languages(availableLanguages?: string[]): string[];
+    languages<T extends string>(availableLanguages?: T[]): T[];
 
     /**
      * Returns the most preferred charset from the client.
@@ -49,7 +49,7 @@ declare class Negotiator {
      * @param [availableCharsets] When provided, returns the most preferred charset
      * from a list of available charsets.
      */
-    charset(availableCharsets?: string[]): string | undefined;
+    charset<T extends string>(availableCharsets?: T[]): T | undefined;
 
     /**
      * Returns an array of preferred charsets ordered by the client preference.
@@ -57,7 +57,7 @@ declare class Negotiator {
      * @param [availableCharsets] When provided, returns an array of preferred charsets
      * ordered by priority from a list of available charsets.
      */
-    charsets(availableCharsets?: string[]): string[];
+    charsets<T extends string>(availableCharsets?: T[]): T[];
 
     /**
      * Returns the most preferred encoding from the client.
@@ -65,7 +65,7 @@ declare class Negotiator {
      * @param [availableEncodings] When provided, returns the most preferred encoding
      * from a list of available encodings.
      */
-    encoding(availableEncodings?: string[]): string | undefined;
+    encoding<T extends string>(availableEncodings?: T[]): T | undefined;
 
     /**
      * Returns an array of preferred encodings ordered by the client preference.
@@ -73,7 +73,7 @@ declare class Negotiator {
      * @param [availableEncodings] When provided, returns an array of preferred encodings
      * ordered by priority from a list of available encodings.
      */
-    encodings(availableEncodings?: string[]): string[];
+    encodings<T extends string>(availableEncodings?: T[]): T[];
 }
 
 declare namespace Negotiator {
